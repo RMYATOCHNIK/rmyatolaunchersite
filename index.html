@@ -4,12 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>rmyatolauncher — Лучший лаунчер Minecraft</title>
-    <!-- Подключение иконки сайта -->
     <link rel="icon" href="https://uploads.onecompiler.io/43bwbqbxa/44v59a2k5/rmyatolauncher.ico" type="image/x-icon">
     <style>
         :root {
             --bg-color: #0f0c1b;
-            --card-bg: #16122c;
             --accent-color: #8a2be2;
             --accent-hover: #a04ef6;
             --text-color: #ffffff;
@@ -42,7 +40,7 @@
         }
 
         header {
-            padding: 20px 50px;
+            padding: 30px 50px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -76,14 +74,14 @@
 
         h1 {
             font-size: 3.5rem;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             background: linear-gradient(45deg, #fff, #b983ff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
         p.subtitle {
-            font-size: 1.2rem;
+            font-size: 1.25rem;
             color: var(--text-muted);
             margin-bottom: 40px;
             max-width: 600px;
@@ -97,8 +95,8 @@
             gap: 12px;
             background-color: var(--accent-color);
             color: #fff;
-            padding: 18px 40px;
-            font-size: 1.2rem;
+            padding: 18px 45px;
+            font-size: 1.25rem;
             font-weight: bold;
             text-decoration: none;
             border-radius: 50px;
@@ -112,41 +110,8 @@
             box-shadow: 0 0 30px rgba(138, 43, 226, 0.7);
         }
 
-        /* Преимущества лаунчера */
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-            margin-top: 60px;
-            width: 100%;
-        }
-
-        .feature-card {
-            background: var(--card-bg);
-            padding: 25px;
-            border-radius: 16px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: transform 0.3s ease;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-            border-color: rgba(138, 43, 226, 0.3);
-        }
-
-        .feature-card h3 {
-            margin-top: 0;
-            color: #fff;
-        }
-
-        .feature-card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 0;
-        }
-
         footer {
-            padding: 20px;
+            padding: 30px 20px;
             text-align: center;
             font-size: 0.9rem;
             color: var(--text-muted);
@@ -171,27 +136,11 @@
 
     <main class="main-content">
         <h1>Твой новый мир Minecraft</h1>
-        <p class="subtitle">Открой для себя rmyatolauncher — быстрый, безопасный и максимально удобный лаунчер для комфортной игры с модами, скинами и друзьями.</p>
+        <p class="subtitle">Открой для себя rmyatolauncher — быстрый, легкий и максимально удобный лаунчер для комфортного запуска любимой игры без лишнего мусора.</p>
         
-        <!-- Кнопка, перекидывающая на страницу скачивания -->
         <a href="download.html" class="download-btn">
             Скачать лаунчер
         </a>
-
-        <div class="features">
-            <div class="feature-card">
-                <h3>Высокая скорость</h3>
-                <p>Моментальный запуск игры и быстрая загрузка любых версий.</p>
-            </div>
-            <div class="feature-card">
-                <h3>Удобный импорт</h3>
-                <p>Установка модов, текстурпаков и шейдеров в один клик.</p>
-            </div>
-            <div class="feature-card">
-                <h3>Оптимизация</h3>
-                <p>Повышенный FPS и стабильная работа даже на слабых ПК.</p>
-            </div>
-        </div>
     </main>
 
     <footer>

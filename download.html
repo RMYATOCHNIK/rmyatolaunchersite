@@ -33,7 +33,6 @@
             border-radius: 24px;
             border: 1px solid rgba(255, 255, 255, 0.05);
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-            position: relative;
         }
 
         .logo {
@@ -49,66 +48,81 @@
             50% { transform: scale(1.05); filter: drop-shadow(0 0 25px var(--accent-color)); }
         }
 
-        h2 {
-            margin-bottom: 10px;
-            font-size: 1.8rem;
+        h2 { margin-bottom: 10px; font-size: 1.8rem; }
+        p { color: var(--text-muted); line-height: 1.6; margin-bottom: 20px; }
+
+        .counter-box {
+            background: rgba(138, 43, 226, 0.1);
+            border: 1px solid rgba(138, 43, 226, 0.3);
+            padding: 12px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+            color: #fff;
         }
 
-        p {
-            color: var(--text-muted);
-            line-height: 1.6;
-            margin-bottom: 30px;
+        .counter-number {
+            font-weight: bold;
+            color: var(--accent-hover);
         }
 
-        /* Ссылки */
         .manual-link {
             color: var(--accent-color);
             text-decoration: none;
             font-weight: bold;
-            transition: color 0.2s;
         }
 
-        .manual-link:hover {
-            color: #a04ef6;
-            text-decoration: underline;
-        }
+        .manual-link:hover { text-decoration: underline; }
 
         .back-btn {
             display: inline-block;
-            margin-top: 20px;
+            margin-top: 15px;
             color: var(--text-muted);
             text-decoration: none;
             font-size: 0.9rem;
-            transition: color 0.2s;
         }
 
-        .back-btn:hover {
-            color: #fff;
-        }
+        .back-btn:hover { color: #fff; }
     </style>
 </head>
 <body>
 
     <div class="download-container">
-        <img class="logo" src="https://uploads.onecompiler.io/43bwbqbxa/44v59a2k5/rmyatolauncher.ico" alt="rmyatolauncher logo">
+        <img class="logo" src="https://uploads.onecompiler.io/43bwbqbxa/44v59a2k5/rmyatolauncher.ico" alt="logo">
         <h2>Спасибо за скачивание!</h2>
-        <p>Загрузка лаунчера <strong>rmyatolauncher</strong> начнется автоматически через несколько секунд.<br><br>
-        Если скачивание не началось, <a href="https://github.com/RMYATOCHNIK/RMYATOLAUNCHER/releases/download/1.1/rmyatolauncher.exe" class="manual-link" id="download-link">нажмите сюда для ручного запуска</a>.</p>
+        
+        <!-- Блок счетчика -->
+        <div class="counter-box">
+            Всего скачиваний: <span id="download-count" class="counter-number">Загрузка...</span>
+        </div>
+
+        <p>Загрузка лаунчера <strong>rmyatolauncher</strong> начнется автоматически.<br><br>
+        Если скачивание не началось, <a href="ссылка_на_твой_лаунчер.exe" class="manual-link">нажмите сюда</a>.</p>
         
         <a href="index.html" class="back-btn">← Вернуться на главную</a>
     </div>
 
     <script>
-        // Функция автоматического скачивания при открытии страницы
+        // Код счетчика скачиваний
+        async function updateDownloadCounter() {
+            try {
+                // Запрос к бесплатному API счетчика
+                const response = await fetch('https://api.countapi.xyz/hit/rmyatolauncher-site/downloads');
+                const data = await response.json();
+                document.getElementById('download-count').innerText = data.value;
+            } catch (error) {
+                document.getElementById('download-count').innerText = '1+';
+            }
+        }
+
         window.onload = function() {
-            // Укажи здесь прямую ссылку на .exe или .jar файл лаунчера
-            const downloadUrl = 'https://github.com/RMYATOCHNIK/RMYATOLAUNCHER/releases/download/1.1/rmyatolauncher.exe'; 
-            
-            // Задержка перед автоматическим скачиванием (1.5 секунды)
+            updateDownloadCounter();
+
+            const downloadUrl = 'ссылка_на_твой_лаунчер.exe'; 
             setTimeout(() => {
                 const a = document.createElement('a');
                 a.href = downloadUrl;
-                a.download = 'rmyatolauncher.exe'; // Имя файла при сохранении
+                a.download = 'rmyatolauncher.exe';
                 document.body.appendChild(a);
                 a.click();
                 document.body.removeChild(a);

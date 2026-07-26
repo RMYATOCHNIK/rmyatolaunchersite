@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -28,7 +28,6 @@
             overflow-x: hidden;
         }
 
-        /* Задний фон с легким свечением */
         .glow-bg {
             position: absolute;
             top: -10%;
@@ -54,12 +53,26 @@
             font-size: 24px;
             font-weight: bold;
             letter-spacing: 1px;
+            color: #fff;
+            text-decoration: none;
         }
 
         .logo img {
             width: 40px;
             height: 40px;
             filter: drop-shadow(0 0 8px var(--accent-color));
+        }
+
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+            transition: color 0.2s;
+        }
+
+        nav a:hover, nav a.active {
+            color: #fff;
         }
 
         .main-content {
@@ -89,7 +102,6 @@
             line-height: 1.6;
         }
 
-        /* Кнопка скачивания */
         .download-btn {
             display: inline-flex;
             align-items: center;
@@ -112,7 +124,6 @@
             box-shadow: 0 0 30px rgba(138, 43, 226, 0.7);
         }
 
-        /* Блок скриншотов */
         .screenshots-section {
             width: 100%;
             margin-top: 20px;
@@ -138,14 +149,12 @@
             overflow: hidden;
             border: 1px solid rgba(255, 255, 255, 0.05);
             transition: all 0.3s ease;
-            cursor: pointer;
         }
 
         .screenshot-card img {
             width: 100%;
             height: auto;
             display: block;
-            transition: transform 0.3s ease;
         }
 
         .screenshot-card:hover {
@@ -154,26 +163,12 @@
             box-shadow: 0 5px 20px rgba(138, 43, 226, 0.2);
         }
 
-        .screenshot-card:hover img {
-            transform: scale(1.02);
-        }
-
         footer {
             padding: 30px 20px;
             text-align: center;
             font-size: 0.9rem;
             color: var(--text-muted);
             border-top: 1px solid rgba(255, 255, 255, 0.05);
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        @media (max-width: 768px) {
-            h1 { font-size: 2.5rem; }
-            header { padding: 20px; }
-            .screenshots-container {
-                grid-template-columns: 1fr;
-            }
         }
     </style>
 </head>
@@ -181,10 +176,14 @@
     <div class="glow-bg"></div>
 
     <header>
-        <div class="logo">
-            <img src="https://uploads.onecompiler.io/43bwbqbxa/44v59a2k5/rmyatolauncher.ico" alt="rmyatolauncher logo">
+        <a href="index.html" class="logo">
+            <img src="https://uploads.onecompiler.io/43bwbqbxa/44v59a2k5/rmyatolauncher.ico" alt="logo">
             rmyatolauncher
-        </div>
+        </a>
+        <nav>
+            <a href="index.html" class="active">Главная</a>
+            <a href="creators.html">Создатели</a>
+        </nav>
     </header>
 
     <main class="main-content">
@@ -199,17 +198,17 @@
             <h2>Интерфейс лаунчера</h2>
             <div class="screenshots-container">
                 <a href="https://uploads.onecompiler.io/43bwbqbxa/1784020878557/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202026-07-14%20142113.png" target="_blank" class="screenshot-card">
-                    <img src="https://uploads.onecompiler.io/43bwbqbxa/1784020878557/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202026-07-14%20142113.png" alt="Скриншот rmyatolauncher 1">
+                    <img src="https://uploads.onecompiler.io/43bwbqbxa/1784020878557/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202026-07-14%20142113.png" alt="Скриншот 1">
                 </a>
                 <a href="https://uploads.onecompiler.io/43bwbqbxa/1784020863202/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202026-07-14%20141506.png" target="_blank" class="screenshot-card">
-                    <img src="https://uploads.onecompiler.io/43bwbqbxa/1784020863202/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202026-07-14%20141506.png" alt="Скриншот rmyatolauncher 2">
+                    <img src="https://uploads.onecompiler.io/43bwbqbxa/1784020863202/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202026-07-14%20141506.png" alt="Скриншот 2">
                 </a>
             </div>
         </section>
     </main>
 
     <footer>
-        &copy; 2026 rmyatolauncher. Все права защищены. Minecraft является торговой маркой Mojang Synergies AB.
+        &copy; 2026 rmyatolauncher. Все права защищены.
     </footer>
 </body>
 </html>

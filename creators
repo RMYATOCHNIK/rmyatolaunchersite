@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Создатели — rmyatolauncher</title>
+    <link rel="icon" href="https://uploads.onecompiler.io/43bwbqbxa/44v59a2k5/rmyatolauncher.ico" type="image/x-icon">
+    <style>
+        :root {
+            --bg-color: #0f0c1b;
+            --card-bg: #16122c;
+            --accent-color: #8a2be2;
+            --accent-hover: #a04ef6;
+            --text-color: #ffffff;
+            --text-muted: #a0a5c0;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            justify-content: space-between;
+        }
+
+        header {
+            padding: 30px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .logo img {
+            width: 40px;
+            height: 40px;
+            filter: drop-shadow(0 0 8px var(--accent-color));
+        }
+
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+            transition: color 0.2s;
+        }
+
+        nav a:hover, nav a.active {
+            color: #fff;
+        }
+
+        .main-content {
+            max-width: 800px;
+            margin: auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            background: linear-gradient(45deg, #fff, #b983ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .creators-grid {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .creator-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 30px;
+            width: 250px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .creator-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+        }
+
+        .avatar {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            box-shadow: 0 0 15px rgba(138, 43, 226, 0.4);
+        }
+
+        .creator-name {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .creator-role {
+            color: var(--accent-hover);
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">
+            <img src="https://uploads.onecompiler.io/43bwbqbxa/44v59a2k5/rmyatolauncher.ico" alt="logo">
+            rmyatolauncher
+        </a>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="creators.html" class="active">Создатели</a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <h1>Команда разработки</h1>
+        <div class="creators-grid">
+            <div class="creator-card">
+                <img src="https://uploads.onecompiler.io/43bwbqbxa/44v59a2k5/rmyatolauncher.ico" alt="RMYATOCHNIK" class="avatar">
+                <div class="creator-name">RMYATOCHNIK</div>
+                <div class="creator-role">Создатель и Разработчик</div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 rmyatolauncher. Все права защищены.
+    </footer>
+
+</body>
+</html>

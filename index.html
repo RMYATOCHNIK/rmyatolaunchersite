@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -138,7 +138,7 @@
 
         .screenshots-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
             width: 100%;
         }
@@ -149,12 +149,18 @@
             overflow: hidden;
             border: 1px solid rgba(255, 255, 255, 0.05);
             transition: all 0.3s ease;
+            position: relative;
+            padding-top: 75%; /* Соответствует пропорции 640x480 */
+            height: 0;
         }
 
-        .screenshot-card img {
+        .screenshot-card iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            height: auto;
-            display: block;
+            height: 100%;
+            border: none;
         }
 
         .screenshot-card:hover {
@@ -197,12 +203,15 @@
         <section class="screenshots-section">
             <h2>Интерфейс лаунчера</h2>
             <div class="screenshots-container">
-                <a href="https://uploads.onecompiler.io/43bwbqbxa/1784020878557/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202026-07-14%20142113.png" target="_blank" class="screenshot-card">
-                    <img src="https://uploads.onecompiler.io/43bwbqbxa/1784020878557/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202026-07-14%20142113.png" alt="Скриншот 1">
-                </a>
-                <a href="https://uploads.onecompiler.io/43bwbqbxa/1784020863202/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202026-07-14%20141506.png" target="_blank" class="screenshot-card">
-                    <img src="https://uploads.onecompiler.io/43bwbqbxa/1784020863202/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202026-07-14%20141506.png" alt="Скриншот 2">
-                </a>
+                <div class="screenshot-card">
+                    <iframe src="https://drive.google.com/file/d/1cMb3BpGIiu526fovNfFbtY7Y8VLz_hy_/preview" allow="autoplay"></iframe>
+                </div>
+                <div class="screenshot-card">
+                    <iframe src="https://drive.google.com/file/d/1Rd0wQtQfQUUxjBSdxg4spgk5rLobE32E/preview" allow="autoplay"></iframe>
+                </div>
+                <div class="screenshot-card">
+                    <iframe src="https://drive.google.com/file/d/1wtS5NYIbzWoOf3V65QmsBW7AYv_hWKLD/preview" allow="autoplay"></iframe>
+                </div>
             </div>
         </section>
     </main>
